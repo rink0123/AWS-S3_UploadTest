@@ -1,0 +1,30 @@
+<!--
+ * 사진 업로드 애플리케이션을 위한 HTML은 브라우저 스크립트가 업로드 사용자 인터페이스를 생성하는 <div> 요소로 구성됩니다.
+ * HTML Source 참고 : https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/s3/s3_photoExample.html
+-->
+<!-- snippet-start:[s3.HTML.photoAlbumExample.complete] -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>S3UploadTest</title>
+<!--
+ * 첫 번째 <script> 요소는 AWS SDK-CDN을 브라우저 스크립트에 추가합니다.
+ * CDN 참고 : https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/
+-->
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.806.0.min.js"></script>
+<!-- 두 번째 <script> 요소는 브라우저 스크립트 코드를 담는 외부 JavaScript 파일을 추가합니다. -->
+<script src="s3_photoExample.js"></script>
+<script>
+	function getHtml(template) {
+		return template.join('\n');
+	}
+	listAlbums();
+</script>
+</head>
+<body>
+	<h1>My Photo Albums App</h1>
+	<div id="app"></div>
+</body>
+</html>
+<!-- snippet-end:[s3.HTML.photoAlbumExample.complete] -->
